@@ -1,6 +1,6 @@
 <?php
 
-include_once('bdd.php');
+include_once('00-bdd.php');
 
 $vider = $bdd->prepare('TRUNCATE TABLE genre_jeux');
 $vider->execute();

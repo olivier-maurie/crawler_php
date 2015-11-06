@@ -1,5 +1,5 @@
 <?php
-	include_once('bdd.php');
+	include_once('00-bdd.php');
 	$url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc WHERE id = 1');
 
 	foreach($url_bdd as $url){

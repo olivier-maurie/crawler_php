@@ -1,5 +1,5 @@
 <?php
-include_once('bdd.php');
+include_once('00-bdd.php');
 
 set_time_limit(5000);
 

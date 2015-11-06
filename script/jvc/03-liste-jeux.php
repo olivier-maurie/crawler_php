@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8"/>
-</head>
-<style>
-	img { width : 50px; height: auto;}
-</style>
-<body>
-	<table border="1">
-		<thead>
-			<td>ID</td>
-			<td>Titre</td>
-			<!--td>Jaquette</td>
-			<td>Date sortie</td>
-			<td>PEGI</td>
-			<td>Nb genre</td>
-			<td>Nb support</td>
-			<td>Nb theme</td>
-			<td>note</td-->
-		</thead>
+<table border="1">
+	<thead>
+		<td>ID</td>
+		<td>Titre</td>
+	</thead>
 <?php
-include_once('bdd.php');
+include_once('00-bdd.php');
 
-set_time_limit(3600);
-
-$url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc WHERE id IN (1004, 437)');
-
+$url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc WHERE titre = ""');
  
 foreach($url_bdd as $url){
-	set_time_limit(0);
 	$curl = curl_init();
 	$timeout = 5000;
 	curl_setopt($curl, CURLOPT_URL, $url['url']);
@@ -81,7 +61,6 @@ foreach($url_bdd as $url){
 		WHERE id = '.$url['id']);
 	
 	//recupération du titre
-
 	if(preg_match_all('#<h1 class="highlight">(.*) sur (.*)</h1>#U', $html, $titre)){
 		$recup_titre = $titre[1][0];
 	}else if(preg_match_all('#<h1 class="highlight">(.*)</h1>#U', $html, $titre)){
@@ -175,48 +154,7 @@ foreach($url_bdd as $url){
 		$note_g = NULL;
 	}
 
-	//récupération editeur/développeur
-	/*if(preg_match_all('#<span(.*)class="JvCare (.*) lien-jv"(.*)>(.*)</span>#U', $html, $dev)){
-		$bloc_dev = $dev[4];
-		$liste_dev = array();
-		$d = sizeof($bloc_dev);
-		for($i=0;$i<$d;$i++){
-			if($dev[4][$i] == preg_match('#Free to play|Très bon|Bon|Moyen|Autres|Site officiel|PlayStation Store|Donnez votre avis#', $dev[4][$i])
-				&& $dev[4][$i] != $genre_1
-				&& $dev[4][$i] != $genre_2
-				&& $dev[4][$i] != $genre_3
-				&& $dev[4][$i] != $genre_4
-				&& $dev[4][$i] != $genre_5
-				&& $dev[4][$i] != $theme_1
-				&& $dev[4][$i] != $theme_2
-				&& $dev[4][$i] != $theme_3
-				&& $dev[4][$i] != $theme_4
-				&& $dev[4][$i] != $theme_5
-				&& $dev[4][$i] != $recup_titre
-				&& $dev[4][$i] != substr($note_g, 0, 2).'/20'
-				&& $dev[4][$i] == preg_match('#[0-9]{1,2}.[0-9]{1}#', $dev[4][$i])
-				){
-				//echo $dev[4][$i].'<br/>';
-				array_push($liste_dev, $dev[4][$i]);
-			}
-		}
-
-		if(preg_match('#<span itemprop="name">(.*)#', $liste_dev[0])){
-			@$dev_1 = substr($liste_dev[0], 22);
-		}else{
-			@$dev_1 = $liste_dev[0];
-		}
-		@$dev_2 = $liste_dev[1];
-		@$dev_3 = $liste_dev[2];
-		@$dev_4 = $liste_dev[3];
-		@$dev_5 = $liste_dev[4];
-
-		echo $url['id'];
-		$count = sizeof($liste_dev);
-		var_dump($liste_dev);
-	}*/
-
-	//insertion dans la bdd*/
+	//insertion dans la bdd
 	@$req_donnees->execute(array(
 		'titre' => $recup_titre,
 		'date_sortie' => $valeur_p,
@@ -266,15 +204,7 @@ foreach($url_bdd as $url){
 			<td>theme('.$size_theme.')</td>
 			<td>'.$note_g.'</td-->
 		</tr>';
-	
-	//var_dump($jaquette);
-	//echo $html;
-		echo $url['id'];
-	var_dump($genre[2], $table_theme);
 }
 
 echo '</table>';
 ?>
-</body>
-<script>//document.location.href='liste_genres.php';</script>
-</html>

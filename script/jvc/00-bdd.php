@@ -4,4 +4,6 @@ try{
 }catch (Exception $e){
     die('Erreur : ' . $e->getMessage());
 }
+
+set_time_limit(0);
 ?>

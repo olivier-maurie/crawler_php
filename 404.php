@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Crawler</title>
+    <title>Crawler - 404</title>
 
     <!-- Bootstrap -->
     <link href="lib/css/bootstrap.min.css" rel="stylesheet">
@@ -19,41 +19,20 @@
     <![endif]-->
   </head>
   <body>
-    	<header>
+    <header>
         <div class="container-fluid">
           <div class="row">
-        		<h1><a href="index.html">Crawler PHP</a></h1>
+        	<h1><a href="../index.html">Crawler PHP</a></h1>
           </div>
         </div>
-    	</header>
-    	
+    </header>
+
   	<div class="container-fluid">
       <div class="row">
-
         <div class="col-lg-2 col-lg-offset-2 wrap-menu">
-          <h2>Jeuxvideo.com</h2>
-          <ol>
-            <li><a href="jvc/01-pages-jeux">Page jeux</a></li>
-            <li><a href="jvc/02-spider.php">Spider</a></li>
-            <li><a href="jvc/03-liste-jeux.php">Récupéraion des données</a></li>
-            <li><a href="jvc/04-liste-genres.php">Création liste de genres</a></li>
-            <li><a href="jvc/05-link-genre-jeux.php">Liaison genres - jeux</a></li>
-            <li><a href="jvc/06-liste-themes.php">Création liste de thèmes</a></li>
-            <li><a href="#">Liaison thèmes - jeux</a></li>
-            <li><a href="jvc/08-liste-plateformes.php">Création liste de plateformes</a></li>
-            <li><a href="#">Liaison plateforme - jeux</a></li>
-            <li><a href="jvc/10-jaquette.php">Téléchargement des jaquettes</a></li>
-          </ol>
+			<h2>Erreur 404</h2>
+			<h3>La page recherchée est inexistant</h3>
         </div>
-
-        <div class="col-lg-2 col-lg-offset-1 wrap-menu">
-          <h2>Gameblog</h2>
-        </div>
-
-        <div class="col-lg-2 col-lg-offset-1 wrap-menu">
-          <h2>Steam</h2>
-        </div>
-
       </div>
     </div>
     

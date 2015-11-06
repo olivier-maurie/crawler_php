@@ -5,21 +5,24 @@ body {
 /* line 4, ../sass/custom.sass */
 body header {
   background: #1565C0;
+}
+/* line 7, ../sass/custom.sass */
+body header a {
   color: #fff;
 }
 
-/* line 8, ../sass/custom.sass */
+/* line 10, ../sass/custom.sass */
 h1, h2 {
   text-align: center;
 }
 
-/* line 11, ../sass/custom.sass */
+/* line 13, ../sass/custom.sass */
 .wrap-menu {
   background: #2196F3;
   margin-top: 15px;
   color: #424242;
 }
-/* line 16, ../sass/custom.sass */
+/* line 18, ../sass/custom.sass */
 .wrap-menu a {
   color: #424242;
 }
