@@ -1,8 +1,6 @@
 <?php
 include_once('00-bdd.php');
 
-set_time_limit(5000);
-
 $theme = $bdd->query('SELECT id, theme_1, theme_2, theme_3, theme_4, theme_5 FROM liste_jeux_jvc');
 
 while($liste_theme = $theme->fetch()){

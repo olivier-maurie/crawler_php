@@ -33,17 +33,21 @@
         <div class="col-lg-2 col-lg-offset-2 wrap-menu">
           <h2>Jeuxvideo.com</h2>
           <ol>
-            <li><a href="jvc/01-pages-jeux">Page jeux</a></li>
-            <li><a href="jvc/02-spider.php">Spider</a></li>
-            <li><a href="jvc/03-liste-jeux.php">Récupéraion des données</a></li>
-            <li><a href="jvc/04-liste-genres.php">Création liste de genres</a></li>
-            <li><a href="jvc/05-link-genre-jeux.php">Liaison genres - jeux</a></li>
-            <li><a href="jvc/06-liste-themes.php">Création liste de thèmes</a></li>
-            <li><a href="#">Liaison thèmes - jeux</a></li>
-            <li><a href="jvc/08-liste-plateformes.php">Création liste de plateformes</a></li>
-            <li><a href="#">Liaison plateforme - jeux</a></li>
-            <li><a href="jvc/10-jaquette.php">Téléchargement des jaquettes</a></li>
+            <li><a href="jvc/01-pages-jeux" target="_blank">Page jeux</a></li>
+            <li><a href="jvc/02-spider" target="_blank">Spider</a></li>
+            <li><a href="jvc/03-liste-jeux" target="_blank">Récupéraion des données</a></li>
+            <li><a href="jvc/04-liste-genres" target="_blank">Création liste de genres</a></li>
+            <li><a href="jvc/05-link-genre-jeux" target="_blank">Liaison genres - jeux</a></li>
+            <li><a href="jvc/06-liste-themes" target="_blank">Création liste de thèmes</a></li>
+            <li><a href="#" target="_blank">Liaison thèmes - jeux</a></li>
+            <li><a href="jvc/08-liste-plateformes" target="_blank">Création liste de plateformes</a></li>
+            <li><a href="#" target="_blank">Liaison plateforme - jeux</a></li>
+            <li><a href="jvc/10-jaquette" target="_blank">Téléchargement des jaquettes</a></li>
           </ol>
+          <hr/>
+          <ul>
+            <li><a href="liste_jeux" target="_blank">Liste des jeux</a></li>
+          </ul>
         </div>
 
         <div class="col-lg-2 col-lg-offset-1 wrap-menu">

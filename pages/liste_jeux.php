@@ -1,8 +1,6 @@
 <?php
 
-include_once('../script/jvc/bdd.php');
-
-set_time_limit(3600);
+include_once('../script/jvc/00-bdd.php');
 
 $url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc GROUP BY id');
 echo '<table>';
