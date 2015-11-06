@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-</head>
-<body>
 <?php
+include_once('00_bdd.php');
 
-//connexion à la bdd
-include_once('bdd.php');
-
-//parser tous les liens sans doublons
+//parser tous les liens qui n'ont jamais été parsé
 $url_bdd = $bdd->query("SELECT * FROM url_jvc WHERE url_checked = 0 GROUP BY id");
-
-
 
 $req_recup_link = $bdd->prepare('INSERT INTO url_jvc(url) VALUES(:url)');
 $req_stockage = $bdd->prepare('INSERT INTO liste_jeux_jvc(url) VALUES(:url)');

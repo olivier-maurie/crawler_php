@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-</head>
-<body>
 <?php
+include_once('00_bdd.php');
 
-//connexion à la bdd
-include_once('bdd.php');
 $req = $bdd->prepare('INSERT INTO url_jvc(url) VALUES(:url)');
 
 for($i=2;$i<=2000;$i++){
@@ -15,8 +8,5 @@ for($i=2;$i<=2000;$i++){
 	$req->execute(array(
 		'url' => $url));
 }
-?>
 
-</body>
-<script>document.location.href='jvc_spider.php';</script>
-</html>
+?>
