@@ -2,6 +2,7 @@
 include_once('bdd.php');
 
 set_time_limit(5000);
+
 $theme = $bdd->query('SELECT id, theme_1, theme_2, theme_3, theme_4, theme_5 FROM liste_jeux_jvc');
 
 while($liste_theme = $theme->fetch()){
@@ -16,13 +17,12 @@ while($liste_theme = $theme->fetch()){
 	);
 	for($i=0;$i<5;$i++){
 		if($tab[$i] == null){
-			echo '-';
+			echo $liste_theme['id'].'-'.'<br/>';
 		}
 		else{
 			$req_theme->execute(array('theme' => $tab[$i]));
 			echo $liste_theme['id'].' - Ajout '.$tab[$i].'<br/>';
 		}
 	}
-	var_dump($tab);
 }
 ?>

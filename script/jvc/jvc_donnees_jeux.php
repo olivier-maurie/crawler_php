@@ -24,7 +24,7 @@ include_once('bdd.php');
 
 set_time_limit(3600);
 
-$url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc WHERE titre =""');
+$url_bdd = $bdd->query('SELECT * FROM liste_jeux_jvc WHERE id IN (1004, 437)');
 
  
 foreach($url_bdd as $url){
@@ -142,9 +142,9 @@ foreach($url_bdd as $url){
 		$table_theme = array();
 		for($i=0;$i<10;$i++){
 			if(@$exist[1][$i] == 'Thème(s) : '){
-				if(preg_match_all('#<span class="JvCare [A-Z0-9]{32,38} lien-jv">(.*)</span>#U', $html, $theme) || preg_match_all('#<span>(Golf|Futuriste)</span>#U', $html, $theme)){
+				if(preg_match_all('#<span class="JvCare [A-Z0-9]{32,38} lien-jv">([^0-9].*)</span>#U', $html, $theme) || preg_match_all('#<span>(Golf|Futuriste)</span>#U', $html, $theme)){
 					for($j=0;$j<15;$j++){
-						if(/*@$theme[1][$j] != preg_match('#^[a-zA-Z]#', $theme) &&*/ @$theme[1][$j] != @$genre[2][0] && @$theme[1][$j] != @$genre[2][1] && @$theme[1][$j] != @$genre[2][3]){
+						if(@$theme[1][$j] != @$genre[2][0] && @$theme[1][$j] != @$genre[2][1] && @$theme[1][$j] != @$genre[2][2] && @$theme[1][$j] != @$genre[2][3] && @$theme[1][$j] != @$genre[2][4]){
 							//echo $j.' - '.@$theme[1][$j].'<br/>';
 							@array_push($table_theme, $theme[1][$j]);
 						}
@@ -166,6 +166,7 @@ foreach($url_bdd as $url){
 		$size_theme = sizeof($table_theme);
 	}
 
+	
 	//récupération note
 	if(preg_match_all('#<div class="corps-cell-hit hit-note-g">(.*)</div>#U', $html, $note)){
 		$note_g = $note[1][0];
@@ -268,7 +269,8 @@ foreach($url_bdd as $url){
 	
 	//var_dump($jaquette);
 	//echo $html;
-	
+		echo $url['id'];
+	var_dump($genre[2], $table_theme);
 }
 
 echo '</table>';
