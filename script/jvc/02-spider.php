@@ -2,7 +2,7 @@
 include_once('00-bdd.php');
 
 //parser tous les liens qui n'ont jamais été parsé
-$url_bdd = $bdd->query("SELECT * FROM url_jvc WHERE url_checked = 1 AND id > 33650 GROUP BY id");
+$url_bdd = $bdd->query("SELECT * FROM url_jvc WHERE url_checked = 0 GROUP BY id");
 
 //stock les lien dans url_jvc et les url de jeux dans liste_jeux_jvc
 $req_stock_url_jvc = $bdd->prepare('INSERT INTO url_jvc(url) VALUES(:url)');
