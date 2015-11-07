@@ -29,7 +29,7 @@
 
   	<div class="container-fluid">
       <div class="row">
-        <div class="col-lg-2 col-lg-offset-2 wrap-menu">
+        <div class="col-lg-2 col-lg-offset-5 wrap-menu">
 			<h2>Erreur 404</h2>
 			<h3>La page recherchée est inexistant</h3>
         </div>

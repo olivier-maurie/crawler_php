@@ -21,8 +21,9 @@ h1, h2 {
   background: #2196F3;
   margin-top: 15px;
   color: #424242;
+  border-radius: 5px;
 }
-/* line 18, ../sass/custom.sass */
+/* line 19, ../sass/custom.sass */
 .wrap-menu a {
   color: #424242;
 }
