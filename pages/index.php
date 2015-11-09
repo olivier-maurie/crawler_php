@@ -39,9 +39,9 @@
             <li><a href="jvc/04-liste-genres" target="_blank">Création liste de genres</a></li>
             <li><a href="jvc/05-link-genre-jeux" target="_blank">Liaison genres - jeux</a></li>
             <li><a href="jvc/06-liste-themes" target="_blank">Création liste de thèmes</a></li>
-            <li><a href="#" target="_blank">Liaison thèmes - jeux</a></li>
+            <li><a href="jvc/07-link-theme-jeux" target="_blank">Liaison thèmes - jeux</a></li>
             <li><a href="jvc/08-liste-plateformes" target="_blank">Création liste de plateformes</a></li>
-            <li><a href="#" target="_blank">Liaison plateforme - jeux</a></li>
+            <li><a href="jvc/09-link-plateforme-jeux" target="_blank">Liaison plateforme - jeux</a></li>
             <li><a href="jvc/10-jaquette" target="_blank">Téléchargement des jaquettes</a></li>
           </ol>
           <hr/>
